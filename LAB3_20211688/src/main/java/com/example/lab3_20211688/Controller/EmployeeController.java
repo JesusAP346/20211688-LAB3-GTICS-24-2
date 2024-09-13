@@ -7,6 +7,7 @@ import com.example.lab3_20211688.Repository.JobRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -40,6 +41,16 @@ public class EmployeeController {
     public String mostrarReportes(Model model){
         return "reportes";
     }
+
+    @GetMapping({"/eliminar"})
+    public String liminarEmpleado(Model model,@RequestParam Integer id){
+        System.out.println(id);
+
+
+        return "redirect:/empleados";
+    }
+
+
 
     @GetMapping({"/editar"})
     public String mostrarEmployee(Model model, @RequestParam("id") Integer id){
