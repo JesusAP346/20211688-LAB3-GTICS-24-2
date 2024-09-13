@@ -34,9 +34,11 @@ public class EmployeeController {
     }
     @GetMapping({"/historial"})
     public String mostrarHistorial(Model model){
-
-
         return "historial";
+    }
+    @GetMapping({"/reportes"})
+    public String mostrarReportes(Model model){
+        return "reportes";
     }
 
     @GetMapping({"/editar"})
