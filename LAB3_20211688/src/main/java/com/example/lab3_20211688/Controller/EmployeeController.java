@@ -16,10 +16,7 @@ public class EmployeeController {
         this.employeeRepository = employeeRepository;
     }
 
-    @GetMapping("/home")
-    public String home(){
-        return "home";
-    }
+
 
     @GetMapping({"","/list","/"})
     public String listarEmpleados(Model model){
@@ -28,5 +25,11 @@ public class EmployeeController {
         model.addAttribute("listaEmployees",listaEmployees);
 
         return "lista";
+    }
+    @GetMapping({"/historial"})
+    public String mostrarHistorial(Model model){
+
+
+        return "historial";
     }
 }

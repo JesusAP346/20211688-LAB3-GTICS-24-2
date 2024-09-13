@@ -17,6 +17,7 @@ public class Employees {
     private String last_name;
     private String email;
     private String phone_number;
+    private String salary;
 
 
     @ManyToOne
