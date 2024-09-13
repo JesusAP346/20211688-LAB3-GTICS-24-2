@@ -42,9 +42,9 @@
 
         <table class=" table table-striped">
             <thead>
-            <tr class="table-dark">
+            <tr class="">
                 <th scope="col">#</th>
-                <th scope="col">Apellido y nombre</th>
+                <th scope="col">Apellido,nombre</th>
                 <th scope="col">Correo</th>
                 <th scope="col">Departamento</th>
                 <th scope="col">Telefono</th>
@@ -64,12 +64,12 @@
                 <td th:text="${employee.getDepartment().getLocation().getCity()}"></td>
                 <td>
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Opciones
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a  class="dropdown-item" th:href="@{'/info' + '?id=' + ${employee.getId()} }"><button type="button" class="btn btn-outline-info" ><i class="fa fa-pencil-alt"></i></i>Editar</button></a></li>
-                            <li><a  class="dropdown-item" th:href="@{'/eliminar' + '?id=' + ${employee.getId()} }"><button type="button" class="btn btn-outline-danger">Eliminar</button></a></li>
+                            <li><a  class="dropdown-item" th:href="@{'/editar' + '?id=' + ${employee.getId()} }"><button type="button" class="btn " ><i class="fa fa-pencil-alt"></i></i>Editar</button></a></li>
+                            <li><a  class="dropdown-item" th:href="@{'/eliminar' + '?id=' + ${employee.getId()} }"><button type="button" class="btn ">Eliminar</button></a></li>
                         </ul>
                     </div>
                 </td>
